@@ -7,7 +7,7 @@ __global__ void fill_the_id(int *arr, int N) {
     // Compute global thread ID
     int global_id = blockIdx.x * blockDim.x + threadIdx.x;
     if (global_id < N) {
-        // Fill the array with the global thread ID
+        // Fill the array with the  global thread ID
         arr[global_id] = global_id;
     }
 }
