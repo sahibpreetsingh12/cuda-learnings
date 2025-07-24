@@ -1,6 +1,5 @@
 # 🚀 CUDA Learning Journal – Day 2
 
-
 ## ✅ Goals for Day 2
 
 - Understand how to launch **multiple blocks and threads**
