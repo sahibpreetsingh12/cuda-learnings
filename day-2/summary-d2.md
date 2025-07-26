@@ -22,7 +22,7 @@ int global_id = blockIdx.x * blockDim.x + threadIdx.x;
 
 ### 2. Bounds Check
 Always check whether the thread is within range before accessing memory:
-```cpp
+```cuda
 if (global_id < N) {
     // Safe to access arr[global_id]
 }
