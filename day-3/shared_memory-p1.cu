@@ -31,7 +31,7 @@ __global__ void shared_memory_sum(int *input, int *output) {
 
 int main() {
     const int N = 8;
-    int h_input[N] = {1, 2, 3, 4, 5, 6, 7, 18};
+    int h_input[N] = {11, 2, 3, 4, 5, 6, 7, 18};
     int h_output;
 
     int *d_input, *d_output;
