@@ -5,11 +5,13 @@ __global__ void shared_memory_sum(int *input, int *output) {
 
 	// Step 1: Declare shared memory
         __shared__ int temp[8];
+
 	
 	int tid = threadIdx.x;
 
 	// Step 2: Copy each value from global to shared memory
     	temp[tid] = input[tid];
+
 
 	// Step 3: Synchronize threads before using shared memory- i.e stopping all threads to wait till every thread copies to shared memory
    	 __syncthreads();
@@ -29,7 +31,7 @@ __global__ void shared_memory_sum(int *input, int *output) {
 
 int main() {
     const int N = 8;
-    int h_input[N] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int h_input[N] = {1, 2, 3, 4, 5, 6, 7, 18};
     int h_output;
 
     int *d_input, *d_output;
