@@ -14,7 +14,7 @@ __global__ void parallel_reduction(int *input, int *output, int N)
             if (tid % (2 * stride) == 0 && (tid + stride) < N) {
                 temp[tid] += temp[tid + stride];  // Change to max/min/product if needed
             }
-            __syncthreads();  // Sync after each stride to avoid race conditions
+            __syncthreads();  // Sync after each stride to avoid race conditions ( Simply that every thread is on same plcae)
         }
 
         // Step 3: Thread 0 writes the final result
