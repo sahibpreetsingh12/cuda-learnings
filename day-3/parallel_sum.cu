@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-
 __global__ void parallel_reduction(int *input, int *output, int N)
+
     {
         __shared__ int temp[8];
         int tid = threadIdx.x;
