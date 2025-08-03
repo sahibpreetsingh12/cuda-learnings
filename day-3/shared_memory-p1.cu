@@ -1,4 +1,5 @@
 // this program can definately be done by single thread but we did it to see in future how memory effiecnit parallel computing can be done
+
 #include <stdio.h>
 
 __global__ void shared_memory_sum(int *input, int *output) {
