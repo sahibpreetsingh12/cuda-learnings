@@ -1,5 +1,6 @@
 # CUDA Day 3 – Shared Memory and Thread Cooperation
 
+
 ---
 
 ## 🔠 Shared Memory in CUDA
